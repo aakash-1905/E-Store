@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ecomm.Controller">
+    <left>
+        <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #E96151;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="1.0" layoutY="163.0" prefHeight="17.0" prefWidth="226.0" text="E-Commerce" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="24.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="1.0" layoutY="201.0" prefHeight="17.0" prefWidth="226.0" text="One Stop Store" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Unicode MS" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Line endX="102.0" layoutX="104.0" layoutY="200.0" startX="-80.0" stroke="WHITE" strokeWidth="2.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Line>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="407.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="signupMsgLabel" alignment="CENTER" layoutX="7.0" layoutY="73.0" prefHeight="18.0" prefWidth="278.0" textFill="#e96151" />
+                <Label alignment="CENTER" layoutX="3.0" layoutY="43.0" prefHeight="30.0" prefWidth="286.0" text="Sign Up" textFill="#e96151">
+                    <font>
+                        <Font name="Verdana Bold" size="19.0" />
+                    </font>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="31.0" layoutY="107.0" prefHeight="28.0" prefWidth="90.0" text="Name">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="32.0" layoutY="203.0" prefHeight="28.0" prefWidth="90.0" text="Password">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameTextField" layoutX="122.0" layoutY="107.0" prefHeight="26.0" prefWidth="131.0" promptText="Enter Name" />
+                <PasswordField fx:id="passPasswordField" layoutX="122.0" layoutY="203.0" prefHeight="26.0" prefWidth="132.0" promptText="Enter Password" />
+                <Button fx:id="signupButton" layoutX="45.0" layoutY="251.0" mnemonicParsing="false" onAction="#signUpButtonAction" prefHeight="30.0" prefWidth="213.0" style="-fx-background-color: #E96151;" text="Sign Up" textFill="WHITE" />
+                <Hyperlink fx:id="loginLink" layoutX="61.0" layoutY="294.0" onAction="#switchToLogin" text="Login Here">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink fx:id="skipLink" layoutX="158.0" layoutY="295.0" onAction="#switchToHome" text="Skip For Now !!!">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink fx:id="exitLink" layoutX="125.0" layoutY="326.0" onAction="#exitLinkAction" prefHeight="25.0" prefWidth="57.0" text="Exit" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Hyperlink>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="139.0" prefHeight="28.0" prefWidth="90.0" text="Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addTextField" layoutX="122.0" layoutY="139.0" prefHeight="26.0" prefWidth="131.0" promptText="Enter Address" />
+            <Label alignment="CENTER" layoutX="31.0" layoutY="171.0" prefHeight="28.0" prefWidth="90.0" text="E-mail">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTextField" layoutX="122.0" layoutY="171.0" prefHeight="26.0" prefWidth="131.0" promptText="Enter Email" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
